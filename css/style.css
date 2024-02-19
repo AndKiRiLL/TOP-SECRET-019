@@ -1,0 +1,339 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(90, 90, 90);
+    overflow: hidden;
+}
+
+.img__bg  {
+    position: absolute;
+    background: url(../img/s_bg.png) no-repeat;
+    background-size: cover;
+    width: 150%;
+    height: 150%;
+}
+
+.img__bg__field {
+    position: absolute;
+    background: url(../img/bg.png) no-repeat;
+    background-size: cover;
+    width: 10%;
+    height: 100%;
+}
+
+.img__shadow {
+    position: absolute;
+    background: url(../img/shadow_window.png);
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 750px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_field {
+    background: url(../img/s_bg.png) no-repeat;
+    height: 919px;
+}
+
+.choose__block {
+    position: relative;
+    width: 430px;
+    height: 290px;
+    background: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0));
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+}
+
+.choose__block__form {
+    height: 230px;
+}
+
+.choose__block__title {
+    color: #fff;
+    font-family: Roboto;
+    font-size: 28px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 300;
+}
+
+.choose__block__hr {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10px;
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.choose__block__slot {
+    width: 175px;
+    height: 175px;
+    background: linear-gradient(rgb(63, 63, 63), rgb(33, 33, 33));
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.choose__block__slot__color {
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose__block__slot_black {
+    background-color: #535353;
+}
+
+.choose__block__slot_white {
+    background-color: #e9e9e9;
+}
+
+.choose__block__slot__button {
+    display: flex;
+    width: 71%;
+    height: 20%;
+    border-radius: 15px;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 18px;
+    justify-content: center;
+    padding-top: 12px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.choose__block__slot__button__white {
+    background-color: #d8d8d8;
+    color: #2b2b2b;
+}
+
+.choose__block__slot__button__black {
+    background-color: #2b2b2b;
+    color: #d8d8d8;
+}
+
+.choose__block__input {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    background-color: #2b2b2b;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
+    outline: none;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 20px;
+    padding-left: 15px;
+}
+
+.choose__block__form__button {
+    margin: 0 auto;
+    margin-top: 25px;
+    width: 200px;
+    height: 40px;
+    background: linear-gradient(rgb(128, 128, 128), rgb(73, 73, 73));
+    color: #fff;
+    border: 0;
+    font-family: Roboto;
+    font-size: 18px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.player {
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(rgb(255, 194, 82), rgb(161, 86, 0));
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+
+.enemy {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(rgb(255, 0, 0), rgb(75, 0, 0)); 
+    border-radius: 20px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    left: 0;
+    top: 0;
+    z-index: 5;
+}
+
+.trap {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: linear-gradient(rgb(58, 58, 58), rgb(49, 49, 49)); 
+    box-shadow: 0px 0px 35px 0px rgba(0, 0, 0, 1);
+    left: 0;
+    top: 0;
+    z-index: 3;
+    border: 5px dotted #6b0000;
+}
+
+.trap__img {
+    width: 100%;
+    height: 100%;
+    scale: 0.65;
+}
+
+.gui__block {
+    height: 60px;
+    background: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0));
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    z-index: 10;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+    padding-right: 10px;
+}
+
+.gui__block__elem__hp {
+    width: 30px;
+    height: 75%;
+    background: linear-gradient(rgb(251, 255, 0), rgb(78, 121, 0));
+    border-radius: 5px;
+    margin: 8px;
+    margin-right: 0;
+}
+
+.gui__center {
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0));
+    margin: 10px;
+    border-radius: 10px;
+    z-index: 10;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.player__name {
+    top: -35px;
+    font-family: Roboto;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    margin: 10px 40px;
+}
+
+.pause_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 11;
+}
+
+.pause__window {
+    width: 200px;
+    height: 75px;
+    background: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0));
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 400px;
+}
+
+.pause__block__title {
+    font-family: Roboto;
+    font-size: 28px;
+    color: #fff;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.finish {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    background: linear-gradient(rgb(217, 255, 0), rgb(129, 165, 0));
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border: 4px outset rgb(236, 255, 128);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.finish__center {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient( rgb(61, 78, 0), rgb(139, 163, 0));
+    border: 5px inset rgb(162, 207, 0);
+}
+
+.window__win {
+    width: 400px;
+    height: 425px;
+    background: linear-gradient(rgb(53, 53, 53), rgb(0, 0, 0));
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 250px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.window__win__title {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.window__win__p {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    color: #fff;
+    text-align: center;
+    padding-top: 25px;
+}
+
+.window__win__button {
+    width: 225px;
+    height: 50px;
+    background: linear-gradient(rgb(126, 126, 126), rgb(71, 71, 71));
+    margin: 0 auto;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    border: 0;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
